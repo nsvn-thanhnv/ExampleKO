@@ -21,12 +21,14 @@
                 <th>Người mua</th>
                 <th>Loại xe</th>
                 <th>Giá tiền</th>
+                <th>Thời gian</th>
             </tr>
         </thead>
         <tbody data-bind="foreach: customer">
             <td><input data-bind="value: name"></td>
             <td><select data-bind="options: $root.availableCar, value: car, optionsText: 'carName'"></select></td>
             <td data-bind="text: fomatPrice"></td>
+            <td data-bind="text: date"></td>
             <td><button data-bind="click: $root.removeCustomer.bind($root)">Xóa</button></td>
         </tbody>
     </table>

@@ -1,7 +1,8 @@
 class CarReservation {
-    constructor(name, initialCar) {
+    constructor(name, initialCar, date) {
         this.name = ko.observable(name);
         this.car = ko.observable(initialCar);
+        this.date = ko.observable(date);
 
         this.fomatPrice = ko.computed(() => {
             var price = this.car().price;
@@ -21,13 +22,13 @@ class ReservationsViewModel {
     ];
 
     customer = ko.observableArray([
-        new CarReservation("Thanh", this.availableCar[0]),
-        new CarReservation("Thanh1", this.availableCar[0]),
-        new CarReservation("Thanh2", this.availableCar[0])
+        new CarReservation("Thanh", this.availableCar[0], new Date()),
+        new CarReservation("Thanh1", this.availableCar[0], new Date()),
+        new CarReservation("Thanh2", this.availableCar[0], new Date())
     ]);
 
     addCustomer() {
-        this.customer.push(new CarReservation("", this.availableCar[0]));
+        this.customer.push(new CarReservation("", this.availableCar[0], new Date()));
     }
 
     removeCustomer(car) { this.customer.remove(car) }
