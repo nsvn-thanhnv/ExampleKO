@@ -22,13 +22,13 @@ class ReservationsViewModel {
     ];
 
     customer = ko.observableArray([
-        new CarReservation("Thanh", this.availableCar[0], new Date()),
-        new CarReservation("Thanh1", this.availableCar[0], new Date()),
-        new CarReservation("Thanh2", this.availableCar[0], new Date())
+        new CarReservation("Thanh", this.availableCar[0], moment()),
+        new CarReservation("Thanh1", this.availableCar[0], moment()),
+        new CarReservation("Thanh2", this.availableCar[0], moment())
     ]);
 
     addCustomer() {
-        this.customer.push(new CarReservation("", this.availableCar[0], new Date()));
+        this.customer.push(new CarReservation("", this.availableCar[0], moment()));
     }
 
     removeCustomer(car) { this.customer.remove(car) }
