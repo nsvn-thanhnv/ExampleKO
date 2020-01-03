@@ -1,0 +1,20 @@
+{
+  "name": "exampleko",
+  "version": "1.0.0",
+  "description": "example knockoutjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "node_modules/.bin/serve"
+  },
+  "keywords": [
+    "knockout",
+    "mvvm"
+  ],
+  "author": "Thanh",
+  "license": "ISC",
+  "dependencies": {
+    "knockout": "^3.5.1",
+    "serve": "^11.2.0"
+  }
+}
