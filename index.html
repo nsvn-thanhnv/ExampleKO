@@ -41,6 +41,15 @@
     </h3>
     <br><br>
     <h3>Total Customer: <span data-bind="text: totalCustomer"></span></h3>
+    <ul data-bind="foreach: ['cats', 'dogs', 'fish']">
+        <li>The value is <span data-bind="text: $data"></span></li>
+    </ul>
+    <h1 data-bind="text: name">T 1</h1>
+
+    <div data-bind="with: manager">
+        <span data-bind="text: name">T</span> is the
+        manager of <span data-bind="text: $parent.name"></span>
+    </div>
     <script type="text/javascript" src="index.js"></script>
 </body>
 

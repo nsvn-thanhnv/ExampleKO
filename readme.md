@@ -10,3 +10,5 @@
     - reverse(), sort() 
 
 ## Bindings 
+- The visible and hidden bindings: ẩn hoặc hiện thành phần của DOM tùy vào giá trị pass
+- The text binding: hiển thị text 1 biên hay 1 trường nào đó trong database 

@@ -55,4 +55,4 @@ class ReservationsViewModel {
 }
 
 var tmp = new ReservationsViewModel();
-ko.applyBindings(tmp);
+ko.applyBindings(tmp, document.body);
